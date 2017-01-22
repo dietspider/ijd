@@ -603,15 +603,18 @@
       <nav id="rescont">
       </nav>
     </aside>
-    <script src="/assets/js/search.js"></script>
-    <script src="/assets/js/toad.min.js"></script>
-    <script>window.toad.startListening();</script>
+    <script async="async" defer="defer" src="/assets/js/search.js"></script>
+    <script async="async" defer="defer" src="/assets/js/toad.js"></script>
+    <script></script>
     <script>
       ;(function(){
-        var a=document.getElementById("menu_btn"),
-            b=document.getElementById("menu_el"),
-            c=document.getElementsByTagName("main")[0];
-        a.addEventListener('click',function(){
+        var a = document.getElementById("menu_btn"),
+            b = document.getElementById("menu_el"),
+            c = document.getElementsByTagName("main")[0];
+        window.addEventListener('load', function () {
+          window.toad.startListening();
+        });
+        a.addEventListener('click', function () {
           c.className="blurred";
           b.className="open";
           (document.documentElement||document.getElementsByTagName("html")[0]).className="no-scroll";
@@ -621,7 +624,7 @@
           b.className="closed";
           (document.documentElement||document.getElementsByTagName("html")[0]).className="";
         });
-        var head=(document.head||document.getElementsByTagName("head")[0]),
+        var head = (document.head||document.getElementsByTagName("head")[0]),
             inertCSS = [].slice.call(document.querySelectorAll('[rel="preload"][as="style"]'));
         if (!!inertCSS) {
           inertCSS.forEach(function (q) {
