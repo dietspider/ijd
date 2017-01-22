@@ -31,10 +31,8 @@
       /*]]>*/-->
     </style>
     <link rel="preload" as="style" href="/assets/css/main.css" onload="this.rel='stylesheet';this.type='text/css';">
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&subset=latin-ext" onload="this.rel='stylesheet';this.type='text/css';">
     <noscript>
       <link rel="stylesheet" href="/assets/css/main.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&subset=latin-ext">
     </noscript>
     <link rel="canonical" href="http://indredouglas.me/">
     <meta name="referrer" content="origin">
@@ -609,7 +607,31 @@
     <script src="/assets/js/toad.min.js"></script>
     <script>window.toad.startListening();</script>
     <script>
-      ;(function(){var a=document.getElementById("menu_btn"),b=document.getElementById("menu_el"),c=document.getElementsByTagName("main")[0];a.addEventListener('click',function(){c.className="blurred";b.className="open";(document.documentElement||document.getElementsByTagName("html")[0]).className="no-scroll";});b.addEventListener('click',function(){c.className="";b.className="closed";(document.documentElement||document.getElementsByTagName("html")[0]).className="";});var head=(document.head||document.getElementsByTagName("head")[0]),inertCSS=document.querySelectorAll('[rel="preload"][as="style"]'),q=inertCSS.length;if(!!q){while(q--){var css=document.createElement("link");css.rel="stylesheet";css.href=inertCSS[q].href;head.appendChild(css);}}})();
+      ;(function(){
+        var a=document.getElementById("menu_btn"),
+            b=document.getElementById("menu_el"),
+            c=document.getElementsByTagName("main")[0];
+        a.addEventListener('click',function(){
+          c.className="blurred";
+          b.className="open";
+          (document.documentElement||document.getElementsByTagName("html")[0]).className="no-scroll";
+        });
+        b.addEventListener('click',function(){
+          c.className="";
+          b.className="closed";
+          (document.documentElement||document.getElementsByTagName("html")[0]).className="";
+        });
+        var head=(document.head||document.getElementsByTagName("head")[0]),
+            inertCSS = [].slice.call(document.querySelectorAll('[rel="preload"][as="style"]'));
+        if (!!inertCSS) {
+          inertCSS.forEach(function (q) {
+            var css = document.createElement("link");
+            css.rel = "stylesheet";
+            css.href = q.getAttribute('href');
+            head.appendChild(css);
+          });
+        }
+      })();
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'));ga('create','UA-70873652-2','auto');ga('send','pageview');
     </script>
   </body>
