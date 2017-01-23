@@ -94,9 +94,8 @@
     }
   }
   
-  function start () {
-    addEventHandler('scroll', rebounce(toad));
-    addEventHandler('resize', rebounce(toad));
-  }
+  toad();
+  addEventHandler('scroll', rebounce(toad));
+  addEventHandler('resize', rebounce(toad));
 
 })(window, window.document);
