@@ -544,8 +544,8 @@
         </article>
         <article>
           <form id="searchform" method="post" action="/search/">
-            <input type="text" name="honeypot" id="honeypot" title="Leave blank" disabled="disabled">
-            <input type="text" name="search" id="search" placeholder="🔍 Search" title="Search" required="required" disabled="disabled">
+            <input type="text" name="honeypot" id="honeypot" title="Leave blank" disabled>
+            <input type="text" name="search" id="search" placeholder="🔍 Search" title="Search" required disabled>
             <input type="submit" id="go" title="Click to search" value="Go">
           </form>
         </article>
@@ -560,7 +560,6 @@
       <nav id="rescont">
       </nav>
     </aside>
-    <script async="async" defer="defer" src="/assets/js/search.js"></script>
     <script async="async" defer="defer" src="/assets/js/toad.js"></script>
     <script></script>
     <script>
@@ -568,9 +567,6 @@
         var x = doc.getElementById("menu_btn"),
             y = doc.getElementById("menu_el"),
             z = doc.getElementsByTagName("main")[0];
-        win.addEventListener('load', function () {
-          win.toad.startListening();
-        });
         x.addEventListener('click', function () {
           z.className="blurred";
           y.className="open";
