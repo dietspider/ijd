@@ -20,10 +20,6 @@
     })();
   }
   
-  win.toad = {
-    startListening: start
-  };
-  
   function addEventHandler (ev, h) {
     win.addEventListener ?
       win.addEventListener(ev, h, !1) : 
@@ -99,7 +95,6 @@
   }
   
   function start () {
-    addEventHandler('load', rebounce(toad));
     addEventHandler('scroll', rebounce(toad));
     addEventHandler('resize', rebounce(toad));
   }
