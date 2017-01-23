@@ -526,69 +526,38 @@
         <a href="https://indredouglas.me/work/" title="Work">Work</a>
         <a href="http://theobscureones.tumblr.com/" title="Tumblr">Tumblr</a>
         <a href="https://indredouglas.me/contact/" title="Contact">Contact</a>
+        <a href="https://indredouglas.me/login/" title="Login">Login</a>
       </nav>
     </aside>
     <footer>
       <nav>
         <article>
           <details>
-            <summary>&copy;2017</summary>
-            <a href="https://indredouglas.me" title="Authorship: Indre Douglas">Authorship: Indre Douglas</a>
-            <a href="https://amdouglas.com" title="Web development: Adam Douglas">Technical: Adam Douglas</a>
+            <summary>&copy;2016</summary>
+            <a href="https://indredouglas.me/" title="Authorship: Indre Douglas">Authorship: Indre Douglas</a>
+            <a href="https://amdouglas.com/" title="Web development: Adam Douglas">Technical: Adam Douglas</a>
           </details>
         </article>
         <article>
           <noscript>
-            <a href="http://enable-javascript.com">Please enable JavaScript to enjoy the full functionality of this website.</a>
+            <a href="http://enable-javascript.com/">Please enable JavaScript to enjoy the full functionality of this website.</a>
           </noscript>
         </article>
         <article>
-          <form id="searchform" method="post" action="/search/">
-            <input type="text" name="honeypot" id="honeypot" title="Leave blank" disabled>
+          <form id="searchform" method="GET" action="/search/" accept-charset="utf-8" enctype="application/x-www-form-urlencoded" autocomplete="off">
             <input type="text" name="search" id="search" placeholder="🔍 Search" title="Search" required disabled>
-            <input type="submit" id="go" title="Click to search" value="Go">
+            <input type="submit" id="go" title="Click to search" value="Go" disabled>
           </form>
         </article>
       </nav>
     </footer>
     <aside id="results" class="closed">
-      <nav id="count">
-        <div>
-          <span id="feedback"></span>
-        </div>
-      </nav>
-      <nav id="rescont">
-      </nav>
+      <nav id="count"><div><span id="feedback"></span></div></nav>
+      <nav id="rescont"></nav>
     </aside>
-    <script async="async" defer="defer" src="/assets/js/toad.js"></script>
-    <script></script>
-    <script>
-      ;(function (win, doc) {
-        var x = doc.getElementById("menu_btn"),
-            y = doc.getElementById("menu_el"),
-            z = doc.getElementsByTagName("main")[0];
-        x.addEventListener('click', function () {
-          z.className="blurred";
-          y.className="open";
-          (doc.documentElement||doc.getElementsByTagName("html")[0]).className="no-scroll";
-        });
-        y.addEventListener('click',function(){
-          z.className="";
-          y.className="closed";
-          (doc.documentElement||doc.getElementsByTagName("html")[0]).className="";
-        });
-        var head = (doc.head||doc.getElementsByTagName("head")[0]),
-            inertCSS = [].slice.call(doc.querySelectorAll('[rel="preload"][as="style"]'));
-        if (!!inertCSS) {
-          inertCSS.forEach(function (q) {
-            var css = doc.createElement("link");
-            css.rel = "stylesheet";
-            css.href = q.getAttribute('href');
-            head.appendChild(css);
-          });
-        }
-      })(window, document);
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'));ga('create','UA-70873652-2','auto');ga('send','pageview');
-    </script>
+    <script async defer src="/assets/js/main.js"></script>
+    <script async defer src="/assets/js/search.js"></script>
+    <script async defer src="/assets/js/toad.js"></script>
+    <script async defer src="https://apis.google.com/js/plusone.js"></script>
   </body>
 </html>
