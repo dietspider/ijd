@@ -1,108 +1,148 @@
-function submitSearch(f){
-  "use strict";
-  function getResults(idno){
-    var rescont=document.getElementById('rescont'),
-        apicall=new XMLHttpRequest();
-    apicall.onload=function(){
-      var posts=(JSON.parse(apicall.responseText)).posts,
-          j=posts.length;
-      while(j--){
-        var post_id=''+posts[j].id;
-        if (post_id===idno){
-          var postEl=document.createElement("div"),
-              pdate=(new Date(posts[j].published_at)).toLocaleDateString(),
-              firstEl=rescont.firstChild;
-          postEl.innerHTML=
-              '<a href="'
-                +posts[j].url+
-              '"><h3>'
-                +posts[j].title+
-              '</h3><p>'
-                +posts[j].meta_description+
-              '</p><p><time>'
-                +pdate+
-              '</time></p></a>';
-          postEl.className="search-result";
-          rescont.insertBefore(postEl,firstEl);
-        }
-      }
-      var m=document.querySelectorAll(".search-result"),
-          k=m.length===1?" result found":" results found";
-      feedback.textContent=m.length+k;
-      feedback.style.backgroundColor="#669900";
-    }
-    
-    apicall.onerror=function(){
-      feedback.textContent="Sorry, there was a technical error. Please try again later.";
-      feedback.style.backgroundColor="crimson";
-    }
-    apicall.open("GET",ghost.url.api("posts"),true);
-    apicall.send();
-  }
-  var feedback=document.getElementById("feedback"),
-      searchform=document.forms["searchform"],
-      xhr=new XMLHttpRequest();
-  xhr.onload=function(){
-    console.log("Successful search xhr");
-    var data=JSON.parse(xhr.responseText),
-        d=data.length;
-    if(d<=0){
-      feedback.textContent="Sorry, no matches found.";
-      feedback.style.backgroundColor="crimson";
-    }
-    while(d--){
-        getResults(data[d].ref);
-    }
-  }
-  xhr.onerror=function(){
-    feedback.textContent="Sorry, there was a technical error. Please try again later.";
-    feedback.style.backgroundColor="crimson";
-  }
-  xhr.open(searchform.method,searchform.action,true);
-  xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-  xhr.send(f);
-}
+;(function(win, doc) {
+  'use strict';
 
-(function(){
-  "use strict";
-  var x=document.getElementById("honeypot"),
-      y=document.getElementById("search"),
-      z=document.getElementById("go"),
-      a=document.forms["searchform"],
-      b=document.getElementById("results"),
-      c=document.getElementById("rescont"),
-      d=document.getElementById("feedback"),
-      main=document.getElementsByTagName("main")[0],
-      rootEl=(document.documentElement||document.getElementsByTagName("html")[0]);
-  x.removeAttribute("disabled");
-  y.removeAttribute("disabled");
-  z.removeAttribute("disabled");
-  b.addEventListener("click",function(){
-    this.className="closed";
-    main.className="";
-    c.innerHTML="";
-    d.innerHTML="";
-    rootEl.className="";
-  });
-  a.addEventListener("submit",function(e){
-    e.preventDefault();
-    c.innerHTML="";
-    d.innerHTML="";
-    main.className="blurred";
-    b.className="open";
-    rootEl.className="no-scroll";
-    var f=(function(){
-      var honeyPot=document.getElementById("honeypot").value,
-          rawQuery=document.getElementById("search").value,
-          strQuery="query="+rawQuery+"&hpt="+honeyPot;
-      if(!honeyPot&&rawQuery&&typeof rawQuery==="string"&&strQuery){
-        return strQuery;
+  if (!('map' in [] && 'filter' in [] && 'reduce' in [] && 'DOMParser' in win && 'compile' in RegExp.prototype)) { return; }
+
+  var _links;
+  var _root         = doc.documentElement;
+  var _main         = doc.getElementsByTagName('main')[0];
+  var _search       = doc.getElementById('searchform');
+  var _honeypot     = doc.getElementById('honeypot');
+  var _results      = doc.getElementById('results');
+  var _rescont      = doc.getElementById('rescont');
+  var _feedback     = doc.getElementById('feedback');
+
+  init();
+
+  function init() {
+    var _xhr = new XMLHttpRequest();
+    [].slice.call(doc.getElementsByTagName('input')).forEach(function(input){input.removeAttribute('disabled');});
+    _xhr.open('GET', 'https://indredouglas.me/feed.xml', true);
+    _xhr.onload = function() {
+      var _doc = new DOMParser().parseFromString(this.responseText, 'text/xml')
+      if (!_doc.getElementsByTagName('item')) { return; }
+      _links = [].slice.call(_doc.getElementsByTagName('item'));
+      _search.addEventListener('submit', handleSearchAttempt, false);
+      _results.addEventListener('click',closeSearchResults,false);
+    };
+    _xhr.onerror = _xhr.ontimeout = _xhr.onabort = function() {
+      console.warn('Error with request: ' + this.status);
+    };
+    _xhr.send(null);
+  }
+
+  function handleSearchAttempt (e) {
+    var _query;
+    if (typeof _links !== 'object' || !Array.isArray(_links) || !_links) { return init(); }
+    typeof e !== 'undefined' && e.preventDefault();
+    console.log(e);
+    _query = e.target.querySelector('#search').value;
+    if (typeof _query !== 'string' || !_query) { return; }
+
+    displaySearchResults(_query, getSearchResults(_query, _links));
+    return false;
+  }
+
+  function displaySearchResults(query, results) {
+    _rescont.innerHTML = '';
+    _feedback.innerHTML = '';
+    _main.className = 'blurred';
+    _results.className = 'open';
+    _root.className = 'no-scroll';
+    if (results.length < 1) {
+      _feedback.textContent = 'Sorry, no matches found.';
+      _feedback.style.backgroundColor = 'crimson';
+    } else {
+      _feedback.textContent = results.length === 1 ? results.length + ' result found': results.length + ' results found';
+      _feedback.style.backgroundColor = '#669900';
+      _rescont.insertAdjacentHTML('beforeend', generateMarkup(results));
+    }
+  }
+
+  function getSearchResults (query, data) {
+    return data.filter(function(item) {
+      return !!occursAtLeastOnce(query.toLowerCase(), [item.textContent.toLowerCase()]);
+    }).map(function(item) {
+      var _title = item.querySelector('title').textContent;
+      var _url = item.querySelector('link').textContent;
+      var _content = item.querySelector('description').textContent;
+      return {
+        'title': _title,
+        'url': _url,
+        'content': _content,
+        'pdate': new Date(item.querySelector('pubDate').textContent),
+        'ldistance': bestOfThree(query.toLowerCase(), [_title.toLowerCase(), _url.toLowerCase(), _content.toLowerCase()])
+      };
+    }).sort(function(p, q) {
+      if (p.ldistance < q.ldistance) { return -1; }
+      if (p.ldistance > q.ldistance) { return 1; }
+      return 0;
+    });
+  }
+
+  function generateMarkup (results) {
+    return results.map(function(result) {
+      return '<div class="search-result"><a href="' + result.url +
+             '" title="' + result.title +
+             '"><h3>' + result.title +
+             '</h3><p>' + result.content +
+             '</p><p><time datetime="' + (result.pdate.toISOString()) +
+             '">' + (result.pdate.toLocaleDateString()) + '</time></p></a></div>';
+    }).reduce(function(acc, nxt) {
+      return acc + nxt;
+    });
+  }
+
+  function bestOfThree (query, candidates) {
+    return candidates.map(function(candidate) {
+      return getLevenshteinDistance(query, candidate);
+    }).sort(function(p, q) {
+      if (p < q) { return -1; }
+      if (p > q) { return 1; }
+      return 0;
+    }).filter(function(item, idx) {
+      return idx === 0;
+    });
+  }
+
+  function occursAtLeastOnce (query, data) {
+    return data.map(function(datum) {
+      if (datum.length < query.length) { return false; }
+      return datum.indexOf(query) !== -1;
+    }).reduce(function(w, x) {
+      return !!(w || x);
+    });
+  }
+
+  function getLevenshteinDistance(string, to_match) {
+    var distance, row1, row2, i, j;
+    for (row2 = [i = 0]; string[i]; ++i) {
+      for (row1 = [j = 0]; to_match[++j];) {
+        distance = row2[j] = i ?
+          Math.min(
+            row2[--j],
+            Math.min(
+              row1[j] - (string[i - 1] === to_match[j]),
+              row1[++j] = row2[j]
+            )
+          ) + 1 : j;
       }
-      else{
-        feedback.innerHTML='<span class="error">Sorry, there was a problem with your query.</span>';
-        return false;
-      }
-    })();
-    submitSearch(f);
-  });
-}());
+    }
+    return distance;
+  }
+
+  function sanitize(text) {
+    return text.split('').map(function(char) {
+      return char === '<' ? '&lt;' : char === '>' ? '&gt;' : char
+    ;}).join('');
+  }
+
+  function closeSearchResults() {
+    _rescont.innerHTML = '';
+    _feedback.innerHTML = '';
+    _main.className = '';
+    _results.className = 'closed';
+    _root.className = '';
+  }
+
+})(window, document);
