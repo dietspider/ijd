@@ -145,7 +145,7 @@
         <article>
           <a href="https://indredouglas.me/weaving-a-life/" title="Weaving a Life">
             <div>
-              <h2 data-src="/content/images/2015/10/blog6.jpg">
+              <h2 data-src="/assets/img/blog/blog6.jpg">
                 <span>Weaving a Life</span>
               </h2>
               <p>Having discussed the figure of death - Giltinė, I would like to cover a slightly more positive deity - Laima. If to simply speak,Laima is a goddess that represents&hellip;</p>
@@ -213,7 +213,7 @@
         <article>
           <a href="https://indredouglas.me/the-biting-scissors-of-death/" title="The Link Between Scissors and Death">
             <div>
-              <h2 data-src="/content/images/2015/10/blog5.jpg">
+              <h2 data-src="/assets/img/blog/blog5.jpg">
                 <span>The Link Between Scissors and Death</span>
               </h2>
               <p>What could be a possible link between scissors and death? I make a lot of gender distinctions when discussing Lithuanian mythology because they are very important. As I have mentioned&hellip;</p>
@@ -281,7 +281,7 @@
         <article>
           <a href="https://indredouglas.me/the-wicked-witch-or-the-fairy/" title="Laumė: the Paradoxical Witch">
             <div>
-              <h2 data-src="/content/images/2015/10/blog4.jpg">
+              <h2 data-src="/assets/img/blog/blog4.jpg">
                 <span>Laumė: the Paradoxical Witch</span>
               </h2>
               <p>In this post I am going to introduce you to another female deity, Laumė, whose name is not amenable to translation in any mythology. The most similar female figures present&hellip;</p>
@@ -349,7 +349,7 @@
         <article>
           <a href="https://indredouglas.me/mythology-and-the-sun/" title="Mythology and the Sun">
             <div>
-              <h2 data-src="/content/images/2015/10/blog3.jpeg">
+              <h2 data-src="/assets/img/blog/blog3.jpeg">
                 <span>Mythology and the Sun</span>
               </h2>
               <p>Since the previous blog post was about the grass snake, by now you have probably figured out that the grass snake and the Sun are both inseparably connected. Both divinities&hellip;</p>
@@ -417,7 +417,7 @@
         <article>
           <a href="https://indredouglas.me/lithuanian-mythology-the-grass-snake/" title="Lithuanian Mythology: The Grass Snake">
             <div>
-              <h2 data-src="/content/images/2015/10/blog2.jpg">
+              <h2 data-src="/assets/img/blog/blog2.jpg">
                 <span>Lithuanian Mythology: The Grass Snake</span>
               </h2>
               <p>It is essential to stress that the Lithuanian mythology cannot be simply compared to the ancient Greek, Roman or even Slavic folklore. In my personal view, it is not always&hellip;</p>
@@ -485,7 +485,7 @@
         <article>
           <a href="https://indredouglas.me/introduction/" title="Introduction">
             <div>
-              <h2 data-src="/content/images/2015/10/blog1.jpg">
+              <h2 data-src="/assets/img/blog/blog1.jpg">
                 <span>Introduction</span>
               </h2>
               <p>So, what is this blog about? I think I am going to simply start of with some clarifications in the subject of history. My aim in this blog is not&hellip;</p>
@@ -607,34 +607,34 @@
     <script async="async" defer="defer" src="/assets/js/toad.js"></script>
     <script></script>
     <script>
-      ;(function(){
-        var a = document.getElementById("menu_btn"),
-            b = document.getElementById("menu_el"),
-            c = document.getElementsByTagName("main")[0];
-        window.addEventListener('load', function () {
-          window.toad.startListening();
+      ;(function (win, doc) {
+        var x = doc.getElementById("menu_btn"),
+            y = doc.getElementById("menu_el"),
+            z = doc.getElementsByTagName("main")[0];
+        win.addEventListener('load', function () {
+          win.toad.startListening();
         });
-        a.addEventListener('click', function () {
-          c.className="blurred";
-          b.className="open";
-          (document.documentElement||document.getElementsByTagName("html")[0]).className="no-scroll";
+        x.addEventListener('click', function () {
+          z.className="blurred";
+          y.className="open";
+          (doc.documentElement||doc.getElementsByTagName("html")[0]).className="no-scroll";
         });
-        b.addEventListener('click',function(){
-          c.className="";
-          b.className="closed";
-          (document.documentElement||document.getElementsByTagName("html")[0]).className="";
+        y.addEventListener('click',function(){
+          z.className="";
+          y.className="closed";
+          (doc.documentElement||doc.getElementsByTagName("html")[0]).className="";
         });
-        var head = (document.head||document.getElementsByTagName("head")[0]),
-            inertCSS = [].slice.call(document.querySelectorAll('[rel="preload"][as="style"]'));
+        var head = (doc.head||doc.getElementsByTagName("head")[0]),
+            inertCSS = [].slice.call(doc.querySelectorAll('[rel="preload"][as="style"]'));
         if (!!inertCSS) {
           inertCSS.forEach(function (q) {
-            var css = document.createElement("link");
+            var css = doc.createElement("link");
             css.rel = "stylesheet";
             css.href = q.getAttribute('href');
             head.appendChild(css);
           });
         }
-      })();
+      })(window, document);
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'));ga('create','UA-70873652-2','auto');ga('send','pageview');
     </script>
   </body>
