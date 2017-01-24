@@ -128,10 +128,12 @@
       ;(function (win, doc) {
         function validateField (e) {
           if (typeof e === 'undefined') { return; }
-          if (!field.value || field.value === '' || field.value.length < 1) {
-            field.className = 'field-invalid';
-          } else {
-            field.className = 'field-valid';
+          if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+            if (!e.target.value || e.target.value === '' || e.target.value.length < 1) {
+              e.target.className = 'field-invalid';
+            } else {
+              e.target.className = 'field-valid';
+            }
           }
         }
 
