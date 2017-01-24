@@ -40,43 +40,25 @@
         "description": "Exploring the mythologies, histories and anthropologies from around the world."
       }
     </script>
-    <link rel="alternate" type="application/rss+xml" title="Indre Douglas" href="https://indredouglas.me/rss/">
   </head>
-  <body class="post-template page-template page page-contact page-template-contact">
-      <header>
-    <nav>
-      <a href="https://indredouglas.me" id="main_title" title="Home">
-        <h1>Indre Douglas</h1>
-      </a>
-      <button id="menu_btn">
-        <span>
-          Menu
-        </span>
-      </button>
-    </nav>
-  </header>
+  <body class="page-contact">
+    <header>
+      <nav>
+        <a href="https://indredouglas.me" id="main_title" title="Home"><h1>Indre Douglas</h1></a>
+        <button id="menu_btn"><span>Menu</span></button>
+      </nav>
+    </header>
     <main>
       <section id="contact">
         <form method="POST" action="/mail/" id="contactform" enctype="application/x-www-form-urlencoded" accept-charset="utf-8" autocomplete="off">
           <fieldset>
-            <h4>
-              Get in touch:
-            </h4>
-            <label>
-              <input type="text" name="name" id="name" placeholder="Your name" title="Please enter your name" pattern=".{1,}" required disabled>
-            </label>
-            <label>
-              <input type="email" name="email" id="email" placeholder="Your email address" title="Please enter your email address" pattern=".{5,}" required disabled>
-            </label>
-            <label>
-              <textarea name="text" id="text" placeholder="Your message" title="Please enter your message" minlength="1" rows="5" required disabled></textarea>
-            </label>
+            <h4>Get in touch:</h4>
+            <label><input type="text" name="name" id="name" placeholder="Your name" title="Please enter your name" pattern=".{1,}" required disabled></label>
+            <label><input type="email" name="email" id="email" placeholder="Your email address" title="Please enter your email address" pattern=".{5,}" required disabled></label>
+            <label><textarea name="text" id="text" placeholder="Your message" title="Please enter your message" minlength="1" rows="5" required disabled></textarea></label>
             <input type="text" name="confirm" id="confirm" value="" disabled>
-            <label>
-              <input type="submit" id="submit" title="Submit your message" value="Submit" disabled>
-            </label>
-            <div id="contactmsg">
-            </div>
+            <label><input type="submit" id="submit" title="Submit your message" value="Submit"></label>
+            <div id="contactmsg"></div>
           </fieldset>
           <address>
             <h4>Follow me:</h4>
@@ -108,9 +90,7 @@
           </details>
         </article>
         <article>
-          <noscript>
-            <a href="http://enable-javascript.com/">Please enable JavaScript to enjoy the full functionality of this website.</a>
-          </noscript>
+          <noscript><a href="http://enable-javascript.com/">Please enable JavaScript to enjoy the full functionality of this website.</a></noscript>
         </article>
         <article>
           <form id="searchform" method="GET" action="/search/" accept-charset="utf-8" enctype="application/x-www-form-urlencoded" autocomplete="off">
