@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>http://indredouglas.me/work/</loc>
+    <lastmod>2016-08-06T02:27:22.027Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://indredouglas.me/contact/</loc>
+    <lastmod>2015-10-25T05:22:33.125Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://indredouglas.me/</loc>
+    <lastmod>2016-10-22T01:16:26.318Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
     <loc>http://indredouglas.me/lithuanian-mythology-the-grass-snake/</loc>
     <lastmod>2016-08-06T13:04:58.362Z</lastmod>
     <changefreq>weekly</changefreq>
