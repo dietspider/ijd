@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>http://indredouglas.me/lithuanian-mythology-the-grass-snake/</loc>
+    <lastmod>2016-08-06T13:04:58.362Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>http://indredouglas.me/assets/img/blog/blog2.jpg</image:loc>
+      <image:caption>Lithuanian Mythology: the Grass Snake</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://indredouglas.me/mythology-and-the-sun/</loc>
+    <lastmod>2016-08-06T13:04:46.816Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>http://indredouglas.me/assets/img/blog/blog3.jpg</image:loc>
+    <image:caption>Mythology and the Sun</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://indredouglas.me/the-wicked-witch-or-the-fairy/</loc>
+    <lastmod>2016-08-06T13:04:31.610Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>http://indredouglas.me/assets/img/blog/blog4.jpg</image:loc>
+    <image:caption>The Wicked Witch, or the Fairy?</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://indredouglas.me/introduction/</loc>
+    <lastmod>2016-08-06T13:04:11.161Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>http://indredouglas.me/assets/img/blog/blog1.jpg</image:loc>
+    <image:caption>Introduction</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://indredouglas.me/weaving-a-life/</loc>
+    <lastmod>2016-08-06T13:03:46.358Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>http://indredouglas.me/assets/img/blog/blog6.jpg</image:loc>
+    <image:caption>Weaving a Life</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://indredouglas.me/the-biting-scissors-of-death/</loc>
+    <lastmod>2016-08-06T02:38:30.651Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>http://indredouglas.me/assets/img/blog/blog5.jpg</image:loc>
+    <image:caption>The Biting Scissors of Death</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://indredouglas.me/lithuanian-shrove-tuesday/</loc>
+    <lastmod>2016-05-05T19:59:38.442Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>http://indredouglas.me/assets/img/blog/blog7.jpg</image:loc>
+    <image:caption>Pancake Day or Halloween? Lithuanian Shrove Tuesday</image:caption>
+    </image:image>
+  </url>
+</urlset>
