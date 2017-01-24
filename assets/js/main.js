@@ -14,6 +14,15 @@
         view_type:'FILTERED_POSTMOD'
       });
     }
+    if ('serviceWorker' in win.navigator) {
+      win.navigator.serviceWorker.register('https://indredouglas.me/sw.js', {
+        scope: '/'
+      }).then(function (registration) {
+        win.console.info('SW registered [' + registration.scope + ']');
+      }).catch(function (err) {
+        win.console.warn('SW failed to register [' + err + ']');
+      });
+    }
   });
   
   _menu_btn.addEventListener('click', function () {
