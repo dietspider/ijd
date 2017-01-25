@@ -35,7 +35,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>http://indredouglas.me/assets/img/blog/blog3.jpg</image:loc>
-    <image:caption>Mythology and the Sun</image:caption>
+      <image:caption>Mythology and the Sun</image:caption>
     </image:image>
   </url>
   <url>
@@ -45,7 +45,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>http://indredouglas.me/assets/img/blog/blog4.jpg</image:loc>
-    <image:caption>The Wicked Witch, or the Fairy?</image:caption>
+      <image:caption>The Wicked Witch, or the Fairy?</image:caption>
     </image:image>
   </url>
   <url>
@@ -55,7 +55,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>http://indredouglas.me/assets/img/blog/blog1.jpg</image:loc>
-    <image:caption>Introduction</image:caption>
+      <image:caption>Introduction</image:caption>
     </image:image>
   </url>
   <url>
@@ -65,7 +65,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>http://indredouglas.me/assets/img/blog/blog6.jpg</image:loc>
-    <image:caption>Weaving a Life</image:caption>
+      <image:caption>Weaving a Life</image:caption>
     </image:image>
   </url>
   <url>
@@ -75,7 +75,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>http://indredouglas.me/assets/img/blog/blog5.jpg</image:loc>
-    <image:caption>The Biting Scissors of Death</image:caption>
+      <image:caption>The Biting Scissors of Death</image:caption>
     </image:image>
   </url>
   <url>
@@ -85,7 +85,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>http://indredouglas.me/assets/img/blog/blog7.jpg</image:loc>
-    <image:caption>Pancake Day or Halloween? Lithuanian Shrove Tuesday</image:caption>
+      <image:caption>Pancake Day or Halloween? Lithuanian Shrove Tuesday</image:caption>
     </image:image>
   </url>
 </urlset>
