@@ -2,7 +2,7 @@
 
 self.importScripts('/assets/js/serviceworker-cache-polyfill.js');
 
-const CACHE_VERSION = 17;
+const CACHE_VERSION = 18;
 const CURRENT_CACHES = {
   prefetch: 'ijd-v' + CACHE_VERSION
 };
