@@ -11,14 +11,74 @@
     <atom:link href="https://indredouglas.me/feed.xml" rel="self" type="application/rss+xml"/>
     <ttl>3600</ttl>
     <item>
-      <title><![CDATA[ ]]></title>
-      <description><![CDATA[ ]]></description>
-      <link>https://indredouglas.me/blog//</link>
-      <guid isPermaLink="true">https://indredouglas.me/blog//</guid>
-      <category><![CDATA[ ]]></category>
-      <category><![CDATA[ ]]></category>
+      <title><![CDATA[Pancake day or Halloween?]]></title>
+      <description><![CDATA[Every year, as the end of January approaches, I always start thinking about Shrove Tuesday. Each year Shrove Tuesday is celebrated on a different day of (usually) February. Having said…]]></description>
+      <link>https://indredouglas.me/blog/lithuanian-shrove-tuesday/</link>
+      <guid isPermaLink="true">https://indredouglas.me/blog/lithuanian-shrove-tuesday/</guid>
+      <category><![CDATA[mythology]]></category>
+      <category><![CDATA[anthropology]]></category>
       <dc:creator><![CDATA[Indre Douglas]]></dc:creator>
       <pubDate>Fri, 28 Oct 2016 08:00:02 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Weaving a Life]]></title>
+      <description><![CDATA[It is essential to stress that the Lithuanian mythology cannot be simply compared to the ancient Greek, Roman or even Slavic folklore. In my personal view, it is not always…]]></description>
+      <link>https://indredouglas.me/blog/weaving-a-life/</link>
+      <guid isPermaLink="true">https://indredouglas.me/blog/weaving-a-life/</guid>
+      <category><![CDATA[mythology]]></category>
+      <category><![CDATA[anthropology]]></category>
+      <dc:creator><![CDATA[Indre Douglas]]></dc:creator>
+      <pubDate>2016-08-06T13:03:46.358Z</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[The Biting Scissors of Death]]></title>
+      <description><![CDATA[What could be a possible link between scissors and death? I make a lot of gender distinctions when discussing Lithuanian mythology because they are very important. As I have mentioned…]]></description>
+      <link>https://indredouglas.me/blog/the-biting-scissors-of-death/</link>
+      <guid isPermaLink="true">https://indredouglas.me/blog/the-biting-scissors-of-death/</guid>
+      <category><![CDATA[mythology]]></category>
+      <category><![CDATA[anthropology]]></category>
+      <dc:creator><![CDATA[Indre Douglas]]></dc:creator>
+      <pubDate>2016-08-06T02:38:30.651Z</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Laumė: the Paradoxical Witch]]></title>
+      <description><![CDATA[In this post I am going to introduce you to another female deity, Laumė, whose name is not amenable to translation in any mythology. The most similar female figures present…]]></description>
+      <link>https://indredouglas.me/blog/the-wicked-witch-or-the-fairy/</link>
+      <guid isPermaLink="true">https://indredouglas.me/blog/the-wicked-witch-or-the-fairy/</guid>
+      <category><![CDATA[mythology]]></category>
+      <category><![CDATA[folklore]]></category>
+      <dc:creator><![CDATA[Indre Douglas]]></dc:creator>
+      <pubDate>2016-08-06T13:04:31.610Z</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Mythology and the Sun]]></title>
+      <description><![CDATA[Since the previous blog post was about the grass snake, by now you have probably figured out that the grass snake and the Sun are both inseparably connected. Both divinities…]]></description>
+      <link>https://indredouglas.me/blog/mythology-and-the-sun/</link>
+      <guid isPermaLink="true">https://indredouglas.me/blog/mythology-and-the-sun/</guid>
+      <category><![CDATA[mythology]]></category>
+      <category><![CDATA[anthropology]]></category>
+      <dc:creator><![CDATA[Indre Douglas]]></dc:creator>
+      <pubDate>2016-08-06T13:04:46.816Z</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Lithuanian Mythology: the Grass Snake]]></title>
+      <description><![CDATA[It is essential to stress that the Lithuanian mythology cannot be simply compared to the ancient Greek, Roman or even Slavic folklore. In my personal view, it is not always…]]></description>
+      <link>https://indredouglas.me/blog/lithuanian-mythology-the-grass-snake/</link>
+      <guid isPermaLink="true">https://indredouglas.me/blog/lithuanian-mythology-the-grass-snake/</guid>
+      <category><![CDATA[mythology]]></category>
+      <category><![CDATA[folklore]]></category>
+      <dc:creator><![CDATA[Indre Douglas]]></dc:creator>
+      <pubDate>2016-08-06T13:04:58.362Z</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Introduction]]></title>
+      <description><![CDATA[So, what is this blog about? I think I am going to simply start of with some clarifications in the subject of history. My aim in this blog is not…]]></description>
+      <link>https://indredouglas.me/blog/introduction/</link>
+      <guid isPermaLink="true">https://indredouglas.me/blog/introduction/</guid>
+      <category><![CDATA[meta]]></category>
+      <category><![CDATA[blogging]]></category>
+      <dc:creator><![CDATA[Indre Douglas]]></dc:creator>
+      <pubDate>2016-08-06T13:04:11.161Z</pubDate>
     </item>
   </channel>
 </rss>
