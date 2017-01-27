@@ -5,7 +5,7 @@
   var _head = (doc.head || doc.getElementsByTagName('head')[0]);
   var inertCSS = [].slice.call(doc.querySelectorAll('[rel="preload"][as="style"]'));
       
-  doc.addEventListener('load', function () {
+  win.addEventListener('load', function () {
     if (!!doc.getElementById('gcomments') && 'gapi' in win) {
       win.gapi.comments.render('gcomments', {
         href: win.location,
